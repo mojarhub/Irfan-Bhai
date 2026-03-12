@@ -10,132 +10,81 @@
     <style>
         * { font-family: 'Noto Sans Bengali', 'Inter', sans-serif; -webkit-user-select: none; user-select: none; }
 
-        /* ===== THEME VARIABLES ===== */
         :root[data-theme="light"] {
-            --bg-primary: #f8fafc;
-            --bg-secondary: #ffffff;
-            --bg-card: #ffffff;
-            --bg-card-hover: #f1f5f9;
-            --bg-input: #f1f5f9;
-            --bg-header: rgba(255,255,255,0.85);
-            --bg-overlay: rgba(0,0,0,0.1);
-            --border-primary: #e2e8f0;
-            --border-secondary: #cbd5e1;
-            --text-primary: #0f172a;
-            --text-secondary: #334155;
-            --text-muted: #64748b;
-            --text-faint: #94a3b8;
-            --accent: #0ea5e9;
-            --accent-bg: rgba(14,165,233,0.1);
-            --accent-border: rgba(14,165,233,0.3);
-            --stat-bg: #f1f5f9;
-            --stat-border: #e2e8f0;
-            --playlist-bg: #f8fafc;
-            --playlist-border: #e2e8f0;
-            --lesson-hover: rgba(14,165,233,0.06);
-            --lesson-active: rgba(14,165,233,0.1);
-            --scrollbar-track: #f1f5f9;
-            --scrollbar-thumb: #cbd5e1;
-            --shadow: 0 1px 3px rgba(0,0,0,0.08);
-            --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+            --bg-primary: #f8fafc; --bg-secondary: #ffffff; --bg-card: #ffffff; --bg-card-hover: #f1f5f9;
+            --bg-input: #f1f5f9; --bg-header: rgba(255,255,255,0.85); --bg-overlay: rgba(0,0,0,0.1);
+            --border-primary: #e2e8f0; --border-secondary: #cbd5e1;
+            --text-primary: #0f172a; --text-secondary: #334155; --text-muted: #64748b; --text-faint: #94a3b8;
+            --accent: #0ea5e9; --accent-bg: rgba(14,165,233,0.1); --accent-border: rgba(14,165,233,0.3);
+            --stat-bg: #f1f5f9; --stat-border: #e2e8f0;
+            --playlist-bg: #f8fafc; --playlist-border: #e2e8f0;
+            --lesson-hover: rgba(14,165,233,0.06); --lesson-active: rgba(14,165,233,0.1);
+            --scrollbar-track: #f1f5f9; --scrollbar-thumb: #cbd5e1;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08); --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
             --login-bg: linear-gradient(135deg, #e0f2fe, #f0f9ff, #e8f5e9);
             --login-box-bg: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,250,252,0.98));
-            --login-box-border: #cbd5e1;
-            --login-box-shadow: 0 25px 60px rgba(0,0,0,0.1);
-            --controls-bg: rgba(248,250,252,0.95);
-            --controls-border: #e2e8f0;
-            --custom-btn-bg: #f1f5f9;
-            --custom-btn-border: #e2e8f0;
-            --custom-btn-color: #334155;
-            --progress-bg: #e2e8f0;
-            --progress-fill: linear-gradient(90deg, #0ea5e9, #6366f1);
+            --login-box-border: #cbd5e1; --login-box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+            --controls-bg: rgba(248,250,252,0.95); --controls-border: #e2e8f0;
+            --custom-btn-bg: #f1f5f9; --custom-btn-border: #e2e8f0; --custom-btn-color: #334155;
+            --progress-bg: #e2e8f0; --progress-fill: linear-gradient(90deg, #0ea5e9, #6366f1);
             --badge-coming-bg: linear-gradient(135deg, #fef3c722, #fef08a22);
-            --badge-coming-border: #fde04755;
-            --badge-coming-color: #a16207;
+            --badge-coming-border: #fde04755; --badge-coming-color: #a16207;
         }
-
         :root[data-theme="dark"] {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --bg-card: rgba(30,41,59,0.6);
-            --bg-card-hover: rgba(30,41,59,0.8);
-            --bg-input: #0f172a;
-            --bg-header: rgba(15,23,42,0.85);
-            --bg-overlay: rgba(0,0,0,0.3);
-            --border-primary: #1e293b;
-            --border-secondary: #334155;
-            --text-primary: #e2e8f0;
-            --text-secondary: #cbd5e1;
-            --text-muted: #94a3b8;
-            --text-faint: #64748b;
-            --accent: #38bdf8;
-            --accent-bg: rgba(56,189,248,0.1);
-            --accent-border: rgba(56,189,248,0.3);
-            --stat-bg: linear-gradient(135deg, rgba(30,41,59,0.8), rgba(30,41,59,0.4));
-            --stat-border: #1e293b;
-            --playlist-bg: rgba(30,41,59,0.5);
-            --playlist-border: rgba(51,65,85,0.5);
-            --lesson-hover: rgba(56,189,248,0.08);
-            --lesson-active: rgba(56,189,248,0.15);
-            --scrollbar-track: #1e293b;
-            --scrollbar-thumb: #334155;
-            --shadow: 0 1px 3px rgba(0,0,0,0.3);
-            --shadow-lg: 0 10px 30px rgba(0,0,0,0.35);
+            --bg-primary: #0f172a; --bg-secondary: #1e293b; --bg-card: rgba(30,41,59,0.6); --bg-card-hover: rgba(30,41,59,0.8);
+            --bg-input: #0f172a; --bg-header: rgba(15,23,42,0.85); --bg-overlay: rgba(0,0,0,0.3);
+            --border-primary: #1e293b; --border-secondary: #334155;
+            --text-primary: #e2e8f0; --text-secondary: #cbd5e1; --text-muted: #94a3b8; --text-faint: #64748b;
+            --accent: #38bdf8; --accent-bg: rgba(56,189,248,0.1); --accent-border: rgba(56,189,248,0.3);
+            --stat-bg: linear-gradient(135deg, rgba(30,41,59,0.8), rgba(30,41,59,0.4)); --stat-border: #1e293b;
+            --playlist-bg: rgba(30,41,59,0.5); --playlist-border: rgba(51,65,85,0.5);
+            --lesson-hover: rgba(56,189,248,0.08); --lesson-active: rgba(56,189,248,0.15);
+            --scrollbar-track: #1e293b; --scrollbar-thumb: #334155;
+            --shadow: 0 1px 3px rgba(0,0,0,0.3); --shadow-lg: 0 10px 30px rgba(0,0,0,0.35);
             --login-bg: linear-gradient(135deg, #0f172a, #1e293b);
             --login-box-bg: linear-gradient(135deg, rgba(30,41,59,0.9), rgba(15,23,42,0.95));
-            --login-box-border: #334155;
-            --login-box-shadow: 0 25px 60px rgba(0,0,0,0.5);
-            --controls-bg: rgba(15,23,42,0.85);
-            --controls-border: #1e293b;
-            --custom-btn-bg: #0b1220;
-            --custom-btn-border: #1f2937;
-            --custom-btn-color: #cbd5e1;
-            --progress-bg: #334155;
-            --progress-fill: linear-gradient(90deg, #38bdf8, #818cf8);
+            --login-box-border: #334155; --login-box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+            --controls-bg: rgba(15,23,42,0.85); --controls-border: #1e293b;
+            --custom-btn-bg: #0b1220; --custom-btn-border: #1f2937; --custom-btn-color: #cbd5e1;
+            --progress-bg: #334155; --progress-fill: linear-gradient(90deg, #38bdf8, #818cf8);
             --badge-coming-bg: linear-gradient(135deg, #f59e0b22, #f9731622);
-            --badge-coming-border: #f59e0b55;
-            --badge-coming-color: #fbbf24;
+            --badge-coming-border: #f59e0b55; --badge-coming-color: #fbbf24;
         }
 
         body { background: var(--bg-primary); color: var(--text-primary); transition: background 0.3s, color 0.3s; }
-
         .view { display: none; opacity: 0; transform: translateY(18px); }
         .view.active { display: block; animation: fadeSlideIn 0.35s ease forwards; }
         @keyframes fadeSlideIn { to { opacity: 1; transform: translateY(0); } }
-
         .tile { transition: transform 0.22s ease, box-shadow 0.22s ease; cursor: pointer; }
         .tile:hover { transform: translateY(-6px) scale(1.02); box-shadow: var(--shadow-lg); }
 
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000; }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .click-shield { position: absolute; inset: 0; z-index: 5; background: transparent; }
+        .big-play { position: absolute; z-index: 6; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; border-radius: 9999px; background: rgba(2,6,23,0.75); border: 1px solid rgba(56,189,248,0.35); display: flex; align-items: center; justify-content: center; font-size: 26px; color: #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.35); cursor: pointer; }
+        .big-play:hover { background: rgba(2,6,23,0.9); }
 
-        /* === Custom Player Masks === */
-        .player-shield { position: relative; border-radius: 12px; overflow: hidden; background: #000; }
-        .mask-top { position: absolute; top: 0; left: 0; right: 0; height: 56px; background: linear-gradient(180deg, #000 0%, #000 65%, rgba(0,0,0,0.6) 85%, transparent 100%); z-index: 10; pointer-events: auto; cursor: default; }
-        .mask-top-left { position: absolute; top: 0; left: 0; width: 200px; height: 52px; background: #000; z-index: 11; pointer-events: auto; cursor: default; }
-        .mask-top-right { position: absolute; top: 0; right: 0; width: 280px; height: 52px; background: #000; z-index: 11; pointer-events: auto; cursor: default; }
-        .mask-bottom-right { position: absolute; bottom: 36px; right: 0; width: 200px; height: 50px; z-index: 10; pointer-events: auto; cursor: default; }
-        .mask-bottom-left { position: absolute; bottom: 36px; left: 0; width: 60px; height: 50px; z-index: 10; pointer-events: auto; cursor: default; }
         .player-brand { position: absolute; top: 0; left: 0; right: 0; height: 42px; z-index: 12; background: linear-gradient(135deg, #0f172a, #1e293b); display: flex; align-items: center; padding: 0 14px; gap: 8px; border-bottom: 1px solid rgba(56,189,248,0.2); pointer-events: auto; cursor: default; }
         .player-brand .brand-dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
         .player-brand .brand-text { font-size: 12px; color: #94a3b8; font-weight: 600; letter-spacing: 0.5px; }
         .player-brand .brand-badge { margin-left: auto; font-size: 10px; color: #64748b; background: rgba(51,65,85,0.5); padding: 2px 8px; border-radius: 10px; }
-        .player-shield:fullscreen .mask-top, .player-shield:fullscreen .mask-top-left, .player-shield:fullscreen .mask-top-right, .player-shield:fullscreen .mask-bottom-right, .player-shield:fullscreen .mask-bottom-left, .player-shield:fullscreen .player-brand { display: none; }
+        .mask-top { position: absolute; top: 0; left: 0; right: 0; height: 56px; background: #000; z-index: 10; pointer-events: auto; cursor: default; }
+        .mask-top-left { position: absolute; top: 0; left: 0; width: 200px; height: 52px; background: #000; z-index: 11; pointer-events: auto; cursor: default; }
+        .mask-top-right { position: absolute; top: 0; right: 0; width: 280px; height: 52px; background: #000; z-index: 11; pointer-events: auto; cursor: default; }
+        .mask-bottom-right { position: absolute; bottom: 36px; right: 0; width: 200px; height: 50px; z-index: 10; pointer-events: auto; cursor: default; }
+        .mask-bottom-left { position: absolute; bottom: 36px; left: 0; width: 60px; height: 50px; z-index: 10; pointer-events: auto; cursor: default; }
+
+        .custom-controls input[type="range"] { -webkit-appearance: none; appearance: none; height: 4px; background: var(--progress-bg); border-radius: 9999px; outline: none; }
+        .custom-controls input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 12px; height: 12px; border-radius: 9999px; background: var(--accent); border: 2px solid var(--bg-primary); }
+        .custom-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 36px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--custom-btn-border); background: var(--custom-btn-bg); color: var(--custom-btn-color); cursor: pointer; }
 
         .breadcrumb { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
         .breadcrumb span { color: var(--text-muted); font-size: 13px; }
         .breadcrumb .sep { color: var(--text-faint); }
         .breadcrumb .current { color: var(--text-primary); font-weight: 600; }
-        .breadcrumb .link { color: var(--accent); cursor: pointer; transition: color 0.2s; }
-        .breadcrumb .link:hover { opacity: 0.8; }
+        .breadcrumb .link { color: var(--accent); cursor: pointer; }
 
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
         ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
-
-        .topic-item { transition: all 0.2s ease; border-left: 3px solid transparent; }
-        .topic-item:hover { background: var(--lesson-hover); border-left-color: var(--accent); }
-        .topic-item.active-topic { background: var(--lesson-active); border-left-color: var(--accent); }
 
         .skull-anim { display: inline-block; font-size: 26px; animation: skullPulse 2s ease-in-out infinite; filter: drop-shadow(0 0 6px rgba(239,68,68,0.5)); }
         @keyframes skullPulse {
@@ -144,238 +93,222 @@
             50% { transform: scale(1.05) rotate(0deg); filter: drop-shadow(0 0 18px rgba(168,85,247,0.7)); }
             75% { transform: scale(1.15) rotate(5deg); filter: drop-shadow(0 0 12px rgba(56,189,248,0.8)); }
         }
-
         .gradient-text { background: linear-gradient(135deg, #0ea5e9, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); } 50% { box-shadow: 0 0 0 6px rgba(34,197,94,0); } }
-
         .icon-bg { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 26px; }
-
         .stat-card { background: var(--stat-bg); border: 1px solid var(--stat-border); border-radius: 12px; padding: 16px 20px; box-shadow: var(--shadow); }
-
         .lesson-card { transition: all 0.2s ease; cursor: pointer; }
         .lesson-card:hover { background: var(--lesson-hover); }
         .lesson-card.now-playing { background: var(--lesson-active); border-color: var(--accent) !important; }
-
         .coming-soon-badge { background: var(--badge-coming-bg); border: 1px dashed var(--badge-coming-border); color: var(--badge-coming-color); font-size: 12px; padding: 4px 10px; border-radius: 20px; }
+        .subject-card { background: var(--bg-card); border: 1px solid var(--border-primary); border-radius: 16px; box-shadow: var(--shadow); }
+        .topic-card { background: var(--bg-card); border: 1px solid var(--border-primary); border-radius: 16px; box-shadow: var(--shadow); }
+        .topic-item { transition: all 0.2s ease; border-left: 3px solid transparent; }
+        .topic-item:hover { background: var(--lesson-hover); border-left-color: var(--accent); }
 
-        /* === Custom Player Overlay + Controls === */
-        .click-shield { position: absolute; inset: 0; z-index: 5; background: transparent; }
-        .big-play { position: absolute; z-index: 6; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; border-radius: 9999px; background: rgba(2,6,23,0.75); border: 1px solid rgba(56,189,248,0.35); display: flex; align-items: center; justify-content: center; font-size: 26px; color: #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.35); cursor: pointer; }
-        .big-play:hover { background: rgba(2,6,23,0.9); }
-
-        .custom-controls input[type="range"] { -webkit-appearance: none; appearance: none; height: 4px; background: var(--progress-bg); border-radius: 9999px; outline: none; }
-        .custom-controls input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 12px; height: 12px; border-radius: 9999px; background: var(--accent); border: 2px solid var(--bg-primary); box-shadow: 0 0 0 2px var(--accent-bg); }
-        .custom-controls input[type="range"]::-moz-range-thumb { width: 12px; height: 12px; border-radius: 9999px; background: var(--accent); border: 2px solid var(--bg-primary); }
-
-        .custom-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 36px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--custom-btn-border); background: var(--custom-btn-bg); color: var(--custom-btn-color); cursor: pointer; }
-        .custom-btn:hover { opacity: 0.8; }
-        .custom-btn svg { width: 16px; height: 16px; }
-
-        /* === LOGIN SCREEN === */
         .login-container { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; background: var(--login-bg); }
         .login-box { background: var(--login-box-bg); border: 1px solid var(--login-box-border); border-radius: 24px; padding: 40px 32px; width: 100%; max-width: 420px; box-shadow: var(--login-box-shadow); }
-        .phone-input { width: 100%; padding: 14px 18px; background: var(--bg-input); border: 2px solid var(--border-secondary); border-radius: 14px; color: var(--text-primary); font-size: 20px; font-weight: 700; text-align: center; letter-spacing: 3px; outline: none; transition: border-color 0.3s; -webkit-user-select: text; user-select: text; }
-        .phone-input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-bg); }
-        .phone-input.error { border-color: #ef4444; animation: shake 0.4s ease; }
-        .phone-input.success { border-color: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,0.2); }
+        .login-input { width: 100%; padding: 14px 18px; background: var(--bg-input); border: 2px solid var(--border-secondary); border-radius: 14px; color: var(--text-primary); font-size: 18px; font-weight: 700; text-align: center; letter-spacing: 2px; outline: none; transition: border-color 0.3s; -webkit-user-select: text; user-select: text; }
+        .login-input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-bg); }
+        .login-input.error { border-color: #ef4444; animation: shake 0.4s ease; }
+        .login-input.success { border-color: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,0.2); }
         @keyframes shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-8px); } 40% { transform: translateX(8px); } 60% { transform: translateX(-6px); } 80% { transform: translateX(6px); } }
         .login-btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #0ea5e9, #6366f1); border: none; border-radius: 14px; color: white; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.3s; }
         .login-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14,165,233,0.3); }
-        .login-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
         .error-msg { color: #ef4444; font-size: 13px; text-align: center; margin-top: 8px; min-height: 20px; }
-        .access-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); color: #16a34a; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; }
-        [data-theme="dark"] .access-badge { color: #4ade80; }
-        .logout-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); color: #dc2626; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 12px; cursor: pointer; transition: all 0.2s; }
-        [data-theme="dark"] .logout-btn { color: #f87171; background: rgba(239,68,68,0.15); border-color: rgba(239,68,68,0.3); }
-        .logout-btn:hover { opacity: 0.8; }
-
-        /* === WARNING NOTE === */
         .warning-note { background: linear-gradient(135deg, rgba(239,68,68,0.08), rgba(239,68,68,0.04)); border: 1px solid rgba(239,68,68,0.2); border-radius: 12px; padding: 12px 16px; margin-top: 16px; }
         .warning-note p { font-size: 12px; color: #ef4444; text-align: center; line-height: 1.6; font-weight: 500; }
+
+        .greeting-badge { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, rgba(34,197,94,0.12), rgba(14,165,233,0.08)); border: 1px solid rgba(34,197,94,0.25); color: #16a34a; font-size: 12px; font-weight: 700; padding: 5px 14px; border-radius: 20px; }
+        [data-theme="dark"] .greeting-badge { color: #4ade80; }
+        .logout-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); color: #dc2626; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 12px; cursor: pointer; }
+        [data-theme="dark"] .logout-btn { color: #f87171; }
+
+        .progress-bar-bg { width: 100%; height: 6px; background: var(--progress-bg); border-radius: 999px; overflow: hidden; }
+        .progress-bar-fill { height: 100%; background: var(--progress-fill); border-radius: 999px; transition: width 0.5s ease; }
+        .progress-text { font-size: 11px; color: var(--text-muted); font-weight: 600; }
+        .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--border-secondary); background: var(--bg-card); cursor: pointer; font-size: 18px; }
+        .session-timer { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; color: var(--text-muted); background: var(--stat-bg); border: 1px solid var(--stat-border); padding: 4px 10px; border-radius: 10px; }
+        .main-header { background: var(--bg-header); border-bottom: 1px solid var(--border-primary); backdrop-filter: blur(12px); }
+        .main-footer { border-top: 1px solid var(--border-primary); background: var(--bg-secondary); }
+        [data-theme="dark"] .main-footer { background: transparent; }
         [data-theme="dark"] .warning-note { background: linear-gradient(135deg, rgba(239,68,68,0.15), rgba(239,68,68,0.08)); border-color: rgba(239,68,68,0.3); }
         [data-theme="dark"] .warning-note p { color: #f87171; }
 
-        /* === GREETING === */
-        .greeting-badge { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, rgba(34,197,94,0.12), rgba(14,165,233,0.08)); border: 1px solid rgba(34,197,94,0.25); color: #16a34a; font-size: 12px; font-weight: 700; padding: 5px 14px; border-radius: 20px; }
-        [data-theme="dark"] .greeting-badge { color: #4ade80; background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(56,189,248,0.1)); border-color: rgba(34,197,94,0.3); }
+        .welcome-overlay { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); backdrop-filter: blur(6px); padding: 20px; }
+        .welcome-popup { background: var(--login-box-bg); border: 1px solid var(--login-box-border); border-radius: 20px; padding: 32px 28px; max-width: 420px; width: 100%; box-shadow: 0 25px 60px rgba(0,0,0,0.4); animation: popIn 0.4s ease; }
+        @keyframes popIn { 0% { opacity: 0; transform: scale(0.85) translateY(20px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+        .welcome-popup .popup-icon { font-size: 48px; text-align: center; margin-bottom: 12px; }
+        .welcome-popup .popup-title { font-size: 20px; font-weight: 800; text-align: center; margin-bottom: 8px; }
+        .welcome-popup .popup-msg { font-size: 14px; color: var(--text-secondary); text-align: center; line-height: 1.8; margin-bottom: 20px; }
+        .welcome-popup .popup-warn { background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(239,68,68,0.05)); border: 1px solid rgba(239,68,68,0.25); border-radius: 12px; padding: 12px 16px; margin-bottom: 20px; }
+        .welcome-popup .popup-warn p { font-size: 13px; color: #ef4444; text-align: center; line-height: 1.7; font-weight: 600; }
+        [data-theme="dark"] .welcome-popup .popup-warn { background: linear-gradient(135deg, rgba(239,68,68,0.18), rgba(239,68,68,0.08)); border-color: rgba(239,68,68,0.35); }
+        [data-theme="dark"] .welcome-popup .popup-warn p { color: #f87171; }
+        .welcome-popup .popup-close-btn { width: 100%; padding: 12px; background: linear-gradient(135deg, #0ea5e9, #6366f1); border: none; border-radius: 12px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.3s; }
+        .welcome-popup .popup-close-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14,165,233,0.3); }
 
-        /* === PROGRESS BAR === */
-        .progress-bar-bg { width: 100%; height: 6px; background: var(--progress-bg); border-radius: 999px; overflow: hidden; }
-        .progress-bar-fill { height: 100%; background: var(--progress-fill); border-radius: 999px; transition: width 0.5s ease; min-width: 0; }
-        .progress-text { font-size: 11px; color: var(--text-muted); font-weight: 600; }
+        .player-shield { position: relative; border-radius: 12px; overflow: hidden; background: #000; }
+        .player-shield:fullscreen .mask-top, .player-shield:fullscreen .mask-top-left, .player-shield:fullscreen .mask-top-right, .player-shield:fullscreen .mask-bottom-right, .player-shield:fullscreen .mask-bottom-left, .player-shield:fullscreen .player-brand { display: none; }
 
-        /* === THEME TOGGLE === */
-        .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--border-secondary); background: var(--bg-card); cursor: pointer; font-size: 18px; transition: all 0.2s; }
-        .theme-toggle:hover { opacity: 0.8; transform: scale(1.05); }
-
-        /* === SESSION TIMER === */
-        .session-timer { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; color: var(--text-muted); background: var(--stat-bg); border: 1px solid var(--stat-border); padding: 4px 10px; border-radius: 10px; }
-        .session-timer .timer-icon { font-size: 13px; }
-
-        /* === HEADER === */
-        .main-header { background: var(--bg-header); border-bottom: 1px solid var(--border-primary); backdrop-filter: blur(12px); }
-
-        /* === SUBJECT CARD === */
-        .subject-card { background: var(--bg-card); border: 1px solid var(--border-primary); border-radius: 16px; box-shadow: var(--shadow); }
-        [data-theme="dark"] .subject-card { background: var(--bg-card); border-color: var(--border-secondary); }
-
-        /* === TOPIC CARD === */
-        .topic-card { background: var(--bg-card); border: 1px solid var(--border-primary); border-radius: 16px; box-shadow: var(--shadow); }
-        [data-theme="dark"] .topic-card { background: var(--bg-card); border-color: var(--border-secondary); }
-
-        /* === FOOTER === */
-        .main-footer { border-top: 1px solid var(--border-primary); background: var(--bg-secondary); }
-        [data-theme="dark"] .main-footer { background: transparent; }
+        .reset-btn { display: inline-flex; align-items: center; gap: 6px; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); color: #dc2626; font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 12px; cursor: pointer; transition: all 0.2s; }
+        .reset-btn:hover { background: rgba(239,68,68,0.2); transform: translateY(-1px); }
+        [data-theme="dark"] .reset-btn { color: #f87171; }
     </style>
 </head>
 <body class="min-h-screen" oncontextmenu="return false;">
 
-    <!-- ===== LOGIN VIEW ===== -->
+    <!-- LOGIN VIEW -->
     <div id="viewLogin" class="view active">
         <div class="login-container">
             <div class="login-box">
                 <div class="text-center mb-8">
                     <span class="skull-anim">💀</span>
                     <h1 class="text-2xl font-extrabold mt-3">Ronaldo</h1>
-                    <p style="color:var(--text-muted)" class="text-sm mt-2">ক্লাসে প্রবেশ করতে আপনার ফোন নম্বর দিন</p>
+                    <p style="color:var(--text-muted)" class="text-sm mt-2">ক্লাসে প্রবেশ করতে পাসওয়ার্ড দিন</p>
                 </div>
                 <div class="mb-4">
-                    <label style="color:var(--text-muted)" class="text-xs font-medium mb-2 block text-center">📱 মোবাইল নম্বর</label>
-                    <input type="tel" id="phoneInput" class="phone-input" inputmode="tel" maxlength="11" placeholder="০১XXXXXXXXX" autocomplete="off" spellcheck="false">
-                    <div id="errorMsg" class="error-msg"></div>
+                    <label style="color:var(--text-muted)" class="text-xs font-medium mb-2 block text-center">🔒 পাসওয়ার্ড</label>
+                    <input type="password" id="passInput" class="login-input" inputmode="numeric" maxlength="11" placeholder="পাসওয়ার্ড লিখুন" autocomplete="off" spellcheck="false">
                 </div>
-                <button id="loginBtn" class="login-btn" onclick="handleLogin()">🔓 প্রবেশ করুন</button>
+                <div id="errorMsg" class="error-msg"></div>
+                <button id="loginBtn" class="login-btn mt-2" onclick="handleLogin()">🔓 প্রবেশ করুন</button>
                 <div class="warning-note">
                     <p>⚠️ পাসওয়ার্ড শেয়ার করলে আপনার আইডি <strong>ব্যান</strong> করা হবে এবং কোনো <strong>রিফান্ড</strong> দেওয়া হবে না।</p>
                 </div>
                 <div class="text-center mt-4">
-                    <p style="color:var(--text-faint)" class="text-xs">Phone number doesn't work? Buy first!</p>
+                    <p style="color:var(--text-faint)" class="text-xs">কোড নেই? দূরে যাই মর।</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ===== HEADER ===== -->
-    <header id="mainHeader" class="main-header sticky top-0 z-50" style="display:none;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-            <div class="flex items-center gap-3 cursor-pointer" onclick="goHome()">
-                <span class="skull-anim">💀</span>
-                <span class="text-lg font-bold tracking-tight hidden sm:block">Ronaldo</span>
+    <!-- WELCOME POPUP -->
+    <div id="welcomePopup" class="welcome-overlay">
+        <div class="welcome-popup">
+            <div class="popup-icon">⚠️</div>
+            <div class="popup-title" id="popupGreeting">স্বাগতম!</div>
+            <div class="popup-msg" id="popupMessage">
+                <!-- ============================================= -->
+                <!-- 🔧 EDIT YOUR CUSTOM MESSAGE BELOW 🔧         -->
+                <!-- ============================================= -->
+                আপনার ক্লাসে স্বাগতম! নিয়মিত ক্লাস দেখুন এবং পরীক্ষার প্রস্তুতি নিন। কোনো সমস্যা হলে শিক্ষকের সাথে যোগাযোগ করুন।
+                <!-- ============================================= -->
             </div>
-            <div id="headerBreadcrumb" class="breadcrumb hidden sm:flex"></div>
-            <div class="flex items-center gap-2">
-                <div id="greetingBadge" class="greeting-badge hidden sm:flex">
-                    <span>👋</span>
-                    <span id="greetingName"></span>
-                </div>
-                <div id="sessionTimer" class="session-timer hidden sm:flex">
-                    <span class="timer-icon">⏱️</span>
-                    <span id="timerDisplay">০০:০০</span>
-                </div>
-                <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="থিম পরিবর্তন">🌙</button>
-                <button class="logout-btn" onclick="handleLogout()">🚪 বের হন</button>
+            <div class="popup-warn">
+                <p>⚠️ পাসওয়ার্ড শেয়ার করলে আইডি ব্যান করা হবে এবং কোনো রিফান্ড দেওয়া হবে না।</p>
+            </div>
+            <button class="popup-close-btn" onclick="closeWelcome()">বুঝেছি ✓</button>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header id="mainHeader" class="main-header sticky top-0 z-50 px-4 py-3" style="display:none;">
+        <div class="max-w-6xl mx-auto flex items-center justify-between gap-3 flex-wrap">
+            <div class="flex items-center gap-3">
+                <span class="skull-anim" style="font-size:22px;">💀</span>
+                <span class="font-extrabold text-lg gradient-text">Ronaldo</span>
+            </div>
+            <div class="breadcrumb" id="breadcrumbBar"></div>
+            <div class="flex items-center gap-2 flex-wrap">
+                <span class="session-timer" id="sessionTimer">⏱️ ০০:০০</span>
+                <span class="greeting-badge" id="greetBadge">👋</span>
+                <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">🌙</button>
+                <button class="logout-btn" onclick="logout()">🚪 লগআউট</button>
             </div>
         </div>
     </header>
 
-    <!-- ===== HOME VIEW ===== -->
+    <!-- HOME VIEW -->
     <div id="viewHome" class="view">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-            <div class="text-center mb-8">
-                <h1 class="text-3xl sm:text-4xl font-extrabold mb-2">
-                    <span class="gradient-text">স্বাগতম, </span><span id="homeGreetName" class="gradient-text"></span><span class="gradient-text">!</span>
-                </h1>
-                <p style="color:var(--text-muted)" class="text-sm sm:text-base">আপনার ক্লাস ড্যাশবোর্ডে আপনাকে স্বাগতম 📚</p>
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="mb-8">
+                <h1 class="text-2xl font-extrabold mb-1" id="homeGreeting">স্বাগতম!</h1>
+                <p style="color:var(--text-muted)" class="text-sm">আপনার ক্লাস ড্যাশবোর্ড</p>
             </div>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8">
-                <div class="stat-card text-center">
-                    <div class="text-2xl font-extrabold" style="color:var(--accent)" id="statSubjects">০</div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+                <div class="stat-card">
+                    <div class="text-2xl font-extrabold" id="statSubjects">০</div>
                     <div class="text-xs font-medium" style="color:var(--text-muted)">বিষয়সমূহ</div>
                 </div>
-                <div class="stat-card text-center">
-                    <div class="text-2xl font-extrabold" style="color:var(--accent)" id="statTopics">০</div>
+                <div class="stat-card">
+                    <div class="text-2xl font-extrabold" id="statTopics">০</div>
                     <div class="text-xs font-medium" style="color:var(--text-muted)">অধ্যায়</div>
                 </div>
-                <div class="stat-card text-center">
-                    <div class="text-2xl font-extrabold" style="color:var(--accent)" id="statLessons">০</div>
+                <div class="stat-card">
+                    <div class="text-2xl font-extrabold" id="statLessons">০</div>
                     <div class="text-xs font-medium" style="color:var(--text-muted)">ভিডিও পাঠ</div>
                 </div>
-                <div class="stat-card text-center">
-                    <div class="flex items-center justify-center gap-2">
-                        <div class="pulse-dot"></div>
-                        <div class="text-sm font-bold" style="color:#22c55e">Active</div>
+                <div class="stat-card">
+                    <div class="flex items-center gap-2">
+                        <span class="pulse-dot"></span>
+                        <span class="text-sm font-bold" style="color:#22c55e;">Active</span>
                     </div>
                     <div class="text-xs font-medium" style="color:var(--text-muted)">লাইভ প্ল্যাটফর্ম</div>
                 </div>
             </div>
-            <div id="subjectGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"></div>
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-bold">📚 বিষয়সমূহ</h2>
+                <button class="reset-btn" onclick="resetProgress()">🔄 প্রগ্রেস রিসেট</button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="subjectGrid"></div>
         </div>
-        <footer class="main-footer mt-12 py-6 text-center">
-            <p style="color:var(--text-faint)" class="text-xs">© 2025 Ronaldo — অনলাইন ক্লাস ড্যাশবোর্ড</p>
-        </footer>
     </div>
 
-    <!-- ===== TOPICS VIEW ===== -->
+    <!-- TOPIC VIEW -->
     <div id="viewTopics" class="view">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
-            <div class="flex items-center gap-3 mb-6">
-                <button onclick="goHome()" class="custom-btn text-sm">← ফিরে যান</button>
-                <div>
-                    <h2 id="topicSubjectName" class="text-xl font-bold"></h2>
-                    <p id="topicSubjectMeta" class="text-xs" style="color:var(--text-muted)"></p>
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="flex items-center gap-4 mb-6">
+                <button class="custom-btn" onclick="goHome()">← ফিরে যান</button>
+                <div class="flex-1 min-w-0">
+                    <h1 class="text-xl font-extrabold truncate" id="topicSubjectName"></h1>
+                    <p class="text-xs" style="color:var(--text-muted)" id="topicSubjectMeta"></p>
                 </div>
             </div>
-            <!-- Subject-wide progress -->
-            <div class="mb-6 p-4 rounded-xl" style="background:var(--stat-bg); border:1px solid var(--stat-border);">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-sm font-bold">সামগ্রিক অগ্রগতি</span>
-                    <span id="subjectProgressText" class="progress-text">০%</span>
+            <div class="mb-6">
+                <div class="flex items-center justify-between mb-1">
+                    <span class="progress-text">সামগ্রিক অগ্রগতি</span>
+                    <span class="progress-text" id="subjectProgressText">০%</span>
                 </div>
-                <div class="progress-bar-bg" style="height:8px;">
-                    <div id="subjectProgressBar" class="progress-bar-fill" style="width:0%"></div>
-                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" id="subjectProgressBar" style="width:0%"></div></div>
             </div>
-            <div id="topicList" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="topicList"></div>
         </div>
     </div>
 
-    <!-- ===== VIDEO VIEW ===== -->
+    <!-- VIDEO VIEW -->
     <div id="viewVideo" class="view">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
-            <div class="flex items-center gap-3 mb-4">
-                <button id="backToTopicsBtn" class="custom-btn text-sm">← অধ্যায়ে ফিরুন</button>
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <div class="flex items-center gap-3 mb-5">
+                <button class="custom-btn" id="backToTopicsBtn">← অধ্যায়</button>
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-lg font-bold truncate" id="videoTitle"></h2>
+                    <p class="text-xs" style="color:var(--text-muted)" id="videoMeta"></p>
+                </div>
             </div>
-            <div class="flex flex-col lg:flex-row gap-4">
-                <!-- Player Area -->
+            <div class="flex flex-col lg:flex-row gap-5">
                 <div class="flex-1">
-                    <div class="player-shield" id="videoContainer">
-                        <div class="video-wrapper">
-                            <div id="ytPlayerMount" class="absolute inset-0"></div>
-                            <div id="clickShield" class="click-shield"></div>
-                            <button id="bigPlayBtn" class="big-play" aria-label="Play" role="button" tabindex="0">▶</button>
+                    <div class="player-shield" id="videoContainer" style="aspect-ratio:16/9; border-radius:12px; overflow:hidden; position:relative; background:#000;">
+                        <div id="ytPlayerMount" class="absolute inset-0"></div>
+                        <div class="click-shield" id="clickShield"></div>
+                        <div class="big-play" id="bigPlayBtn">▶</div>
+                        <div class="player-brand">
+                            <span class="brand-dot"></span>
+                            <span class="brand-text">Ronaldo Player</span>
+                            <span class="brand-badge">🔒 Protected</span>
                         </div>
                         <div class="mask-top"></div>
                         <div class="mask-top-left"></div>
                         <div class="mask-top-right"></div>
                         <div class="mask-bottom-right"></div>
                         <div class="mask-bottom-left"></div>
-                        <div class="player-brand">
-                            <div class="brand-dot"></div>
-                            <span class="brand-text">Ronaldo Player</span>
-                            <span class="brand-badge">🔒 Protected</span>
-                        </div>
                     </div>
-
-                    <!-- Custom Controls -->
-                    <div class="custom-controls flex flex-wrap items-center gap-2 mt-3 px-3 py-2.5 rounded-xl" style="background:var(--controls-bg); border:1px solid var(--controls-border);">
-                        <button id="btnPlayPause" class="custom-btn" title="Play/Pause">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                            <span class="hidden sm:inline">Play</span>
-                        </button>
-                        <input id="seekBar" type="range" min="0" max="100" value="0" class="flex-1 min-w-[80px]" title="Seek">
-                        <span id="timeLabel" class="text-xs font-mono whitespace-nowrap" style="color:var(--text-muted)">0:00 / 0:00</span>
-                        <input id="volBar" type="range" min="0" max="100" value="75" class="w-16 hidden sm:block" title="Volume">
+                    <div class="custom-controls flex items-center gap-2 flex-wrap mt-3 p-3 rounded-xl" style="background:var(--controls-bg); border:1px solid var(--controls-border);">
+                        <button class="custom-btn" id="btnPlayPause">▶ Play</button>
+                        <input type="range" id="seekBar" value="0" min="0" max="100" step="0.1" class="flex-1 min-w-[80px]">
+                        <span class="text-xs font-mono" style="color:var(--text-muted)" id="timeLabel">0:00 / 0:00</span>
+                        <input type="range" id="volBar" value="80" min="0" max="100" step="1" class="w-20">
                         <select id="speedSel" class="custom-btn text-xs" style="padding:0 8px;">
                             <option value="0.5">0.5x</option>
                             <option value="0.75">0.75x</option>
@@ -384,55 +317,45 @@
                             <option value="1.5">1.5x</option>
                             <option value="2">2x</option>
                         </select>
-                        <button id="btnFullscreen" class="custom-btn" title="Fullscreen">⛶</button>
+                        <button class="custom-btn" id="btnFullscreen">⛶</button>
                     </div>
-
-                    <div class="mt-4">
-                        <h2 id="videoTitle" class="text-lg font-bold"></h2>
-                        <p id="videoMeta" class="text-xs mt-1" style="color:var(--text-muted)"></p>
-                    </div>
-                    <div class="flex gap-2 mt-3">
-                        <button id="prevLessonBtn" onclick="prevLesson()" class="custom-btn text-sm">⏮ পূর্ববর্তী</button>
-                        <button id="nextLessonBtn" onclick="nextLesson()" class="custom-btn text-sm">পরবর্তী ⏭</button>
+                    <div class="flex items-center gap-2 mt-3">
+                        <button class="custom-btn flex-1" id="prevLessonBtn" onclick="prevLesson()">⏮ পূর্ববর্তী</button>
+                        <button class="custom-btn flex-1" id="nextLessonBtn" onclick="nextLesson()">পরবর্তী ⏭</button>
                     </div>
                 </div>
-
-                <!-- Playlist Sidebar -->
-                <div class="lg:w-80 rounded-xl overflow-hidden" style="background:var(--playlist-bg); border:1px solid var(--playlist-border);">
-                    <div class="px-4 py-3" style="border-bottom:1px solid var(--border-primary)">
-                        <h3 id="playlistTitle" class="font-bold text-sm"></h3>
-                        <p id="playlistCount" class="text-xs" style="color:var(--text-muted)"></p>
-                        <div class="mt-2">
-                            <div class="flex items-center justify-between mb-1">
-                                <span id="topicProgressText" class="progress-text">০/০ সম্পন্ন</span>
-                            </div>
-                            <div class="progress-bar-bg">
-                                <div id="topicProgressBar" class="progress-bar-fill" style="width:0%"></div>
+                <div class="lg:w-80 xl:w-96 shrink-0">
+                    <div class="rounded-xl overflow-hidden" style="border:1px solid var(--playlist-border); background:var(--playlist-bg);">
+                        <div class="px-4 py-3" style="border-bottom:1px solid var(--playlist-border)">
+                            <h3 class="font-bold text-sm" id="playlistTitle"></h3>
+                            <p class="text-xs" style="color:var(--text-muted)" id="playlistCount"></p>
+                            <div class="mt-2">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="progress-text" id="topicProgressText">০/০ সম্পন্ন</span>
+                                </div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" id="topicProgressBar" style="width:0%"></div></div>
                             </div>
                         </div>
+                        <div id="playlistItems" class="max-h-[60vh] overflow-y-auto"></div>
                     </div>
-                    <div id="playlistItems" class="max-h-[400px] overflow-y-auto"></div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- FOOTER -->
+    <footer id="mainFooter" class="main-footer text-center py-4 mt-10" style="display:none;">
+        <p class="text-xs" style="color:var(--text-faint)">© 2025 Ronaldo. সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
 <script>
 // ========================
 //  STUDENT DATABASE
 // ========================
-// Format: 'PhoneNumber': { name: 'Student Name', subjects: ['subject_id', ...] }
-// Use ['all'] for master/admin access to everything
 const STUDENTS = {
-    '01611507803': { name: 'Irfan', subjects: ['all'] },
-    '01842478795': { name: 'Tuhin', subjects: ['all'] },
-    '01700000003': { name: 'সাকিব', subjects: ['bgs'] },
-    '01700000004': { name: 'নাফিস', subjects: ['biology'] },
-    '01700000005': { name: 'ফাহিম', subjects: ['chemistry'] },
-    '01700000006': { name: 'আরিফ', subjects: ['physics'] },
-    '01700000007': { name: 'রিয়াদ', subjects: ['math'] },
-    '01700000008': { name: 'জুবায়ের', subjects: ['highermath'] },
-    '01700000009': { name: 'শিক্ষক (Admin)', subjects: ['all'] },
+    '01611507803': { name: 'Irfan', subjects: 'all' },
+    '01842478795': { name: 'Tuhin', subjects: 'all' },
+    '01511507803': { name: 'Dummy', subjects: ['biology'] },
 };
 
 // ========================
@@ -440,225 +363,221 @@ const STUDENTS = {
 // ========================
 const COURSES = [
     {
-        id: 'bangla1', name: 'বাংলা ১ম পত্র', icon: '📖',
-        gradient: 'linear-gradient(135deg, #0ea5e9, #6366f1)',
+        id: 'bangla1', name: 'বাংলা ১ম পত্র', icon: '📖', gradient: 'linear-gradient(135deg, #3b82f6, #6366f1)',
         topics: [
-            { id: 'prottupkar', name: 'প্রত্যুপকার', icon: '📝', lessons: [
-                { title: 'প্রত্যুপকার (১)', videoId: 'x4yJlJk26rk' },
-                { title: 'প্রত্যুপকার (২)', videoId: 'ANLc_Ux5HVU' },
+            { id: 'prottyupokar', name: 'প্রত্যুপকার', icon: '📕', lessons: [
+                { id: 'p1', title: 'প্রত্যুপকার (১)', videoId: 'x4yJlJk26rk' },
+                { id: 'p2', title: 'প্রত্যুপকার (২)', videoId: 'ANLc_Ux5HVU' },
             ]},
-            { id: 'subha', name: 'সুভা', icon: '👧', lessons: [
-                { title: 'সুভা (১)', videoId: 'qKE7nYfpPVE' },
-                { title: 'সুভা (২)', videoId: 'eVa744zKXzI' },
-                { title: 'সুভা (৩)', videoId: '79cOn0rXUlI' },
+            { id: 'subha', name: 'সুভা', icon: '📗', lessons: [
+                { id: 's1', title: 'সুভা (১)', videoId: 'qKE7nYfpPVE' },
+                { id: 's2', title: 'সুভা (২)', videoId: 'eVa744zKXzI' },
+                { id: 's3', title: 'সুভা (৩)', videoId: '79cOn0rXUlI' },
             ]},
-            { id: 'ranar', name: 'রানার', icon: '🏃', lessons: [
-                { title: 'রানার (১)', videoId: 'BsJUK3p2II4' },
-                { title: 'রানার (২)', videoId: 'u_5yq81KeEA' },
+            { id: 'runner', name: 'রানার', icon: '🏃', lessons: [
+                { id: 'r1', title: 'রানার (১)', videoId: 'BsJUK3p2II4' },
+                { id: 'r2', title: 'রানার (২)', videoId: 'u_5yq81KeEA' },
             ]},
             { id: 'boshekh', name: 'বোশেখ', icon: '🌸', lessons: [
-                { title: 'বোশেখ (১)', videoId: 'UQHhyh4egIA' },
-                { title: 'বোশেখ (২)', videoId: 'OQEfRMT70Ks' },
-                { title: 'বোশেখ (৩)', videoId: '5bWXf-cEI1E' },
+                { id: 'b1', title: 'বোশেখ (১)', videoId: 'UQHhyh4egIA' },
+                { id: 'b2', title: 'বোশেখ (২)', videoId: 'OQEfRMT70Ks' },
+                { id: 'b3', title: 'বোশেখ (৩)', videoId: '5bWXf-cEI1E' },
             ]},
             { id: 'upekkhito', name: 'উপেক্ষিত শক্তির উদ্বোধন', icon: '💪', lessons: [
-                { title: 'উপেক্ষিত শক্তির উদ্বোধন (১)', videoId: 'NF63pDq_XQs' },
-                { title: 'উপেক্ষিত শক্তির উদ্বোধন (২)', videoId: 'tEKfFv8yeQc' },
+                { id: 'u1', title: 'উপেক্ষিত শক্তির উদ্বোধন (১)', videoId: 'CkbA_ZV1yU8' },
+                { id: 'u2', title: 'উপেক্ষিত শক্তির উদ্বোধন (২)', videoId: 'tEKfFv8yeQc' },
             ]},
             { id: 'probash', name: 'প্রবাস বন্ধু', icon: '🤝', lessons: [
-                { title: 'প্রবাস বন্ধু (১)', videoId: 'HAWUeON5HBw' },
-                { title: 'প্রবাস বন্ধু (২)', videoId: 'EG1JNAe2-wM' },
-                { title: 'প্রবাস বন্ধু (৩)', videoId: 'NnJDCFIS74g' },
+                { id: 'pb1', title: 'প্রবাস বন্ধু (১)', videoId: 'HAWUeON5HBw' },
+                { id: 'pb2', title: 'প্রবাস বন্ধু (২)', videoId: 'EG1JNAe2-wM' },
+                { id: 'pb3', title: 'প্রবাস বন্ধু (৩)', videoId: 'NnJDCFIS74g' },
             ]},
-            { id: 'shadhinota', name: 'তোমাকে পাওয়ার জন্যে, হে স্বাধীনতা', icon: '🇧🇩', lessons: [
-                { title: 'হে স্বাধীনতা (১)', videoId: 'BeDsNZxqhxE' },
-                { title: 'হে স্বাধীনতা (২)', videoId: 'TYoh10AGjWs' },
+            { id: 'swadhinota', name: 'তোমাকে পাওয়ার জন্যে, হে স্বাধীনতা', icon: '🇧🇩', lessons: [
+                { id: 'sw1', title: 'তোমাকে পাওয়ার জন্যে, হে স্বাধীনতা (১)', videoId: 'BeDsNZxqhxE' },
+                { id: 'sw2', title: 'তোমাকে পাওয়ার জন্যে, হে স্বাধীনতা (২)', videoId: 'TYoh10AGjWs' },
             ]},
             { id: 'ekusher', name: 'একুশের গল্প', icon: '📕', lessons: [
-                { title: 'একুশের গল্প (১)', videoId: 'i4kr4lb6j9E' },
-                { title: 'একুশের গল্প (২)', videoId: '9F5qf6LOd6g' },
+                { id: 'eg1', title: 'একুশের গল্প (১)', videoId: 'i4kr4lb6j9E' },
+                { id: 'eg2', title: 'একুশের গল্প (২)', videoId: '9F5qf6LOd6g' },
             ]},
             { id: 'kopotakkho', name: 'কপোতাক্ষ নদ', icon: '🏞️', lessons: [
-                { title: 'কপোতাক্ষ নদ (১)', videoId: 'Dkd4LERvEAo' },
-                { title: 'কপোতাক্ষ নদ (২)', videoId: '714OI7sfZJg' },
-                { title: 'কপোতাক্ষ নদ (৩)', videoId: '0LlBgHh9LBU' },
+                { id: 'kn1', title: 'কপোতাক্ষ নদ (১)', videoId: 'Dkd4LERvEAo' },
+                { id: 'kn2', title: 'কপোতাক্ষ নদ (২)', videoId: '714OI7sfZJg' },
+                { id: 'kn3', title: 'কপোতাক্ষ নদ (৩)', videoId: '0LlBgHh9LBU' },
             ]},
         ]
     },
     {
-        id: 'bangla2', name: 'বাংলা ২য় পত্র', icon: '✏️',
-        gradient: 'linear-gradient(135deg, #6366f1, #a855f7)',
+        id: 'bangla2', name: 'বাংলা ২য় পত্র', icon: '✏️', gradient: 'linear-gradient(135deg, #8b5cf6, #a855f7)',
         topics: [
-            { id: 'porichhed1_3', name: 'পরিচ্ছেদ ১-৩: ভাষা, ব্যাকরণ ও ভাষার রীতি', icon: '📗', lessons: [
-                { title: 'পরিচ্ছেদ ১ — ভাষা ও বাংলা ভাষা', videoId: 'uB4Ng8heU20' },
-                { title: 'পরিচ্ছেদ ২-৩ — ব্যাকরণ ও ভাষার রীতি', videoId: '3mExSQUxVEQ' },
+            { id: 'porichhed_1_3', name: 'পরিচ্ছেদ ১-৩: ভাষা, ব্যাকরণ ও ভাষার রীতি', icon: '📝', lessons: [
+                { id: 'pc1', title: 'পরিচ্ছেদ ১ — ভাষা ও বাংলা ভাষা', videoId: 'uB4Ng8heU20' },
+                { id: 'pc2', title: 'পরিচ্ছেদ ২-৩ — ব্যাকরণ ও ভাষার রীতি', videoId: '3mExSQUxVEQ' },
             ]},
-            { id: 'porichhed4', name: 'পরিচ্ছেদ ৪: বাগযন্ত্র', icon: '🗣️', lessons: [
-                { title: 'বাগযন্ত্র (১)', videoId: 'w4N1l_tTmiU' },
+            { id: 'porichhed_4', name: 'পরিচ্ছেদ ৪: বাগযন্ত্র', icon: '🗣️', lessons: [
+                { id: 'pc4', title: 'পরিচ্ছেদ ৪ — বাগযন্ত্র', videoId: 'w4N1l_tTmiU' },
             ]},
-            { id: 'porichhed35', name: 'পরিচ্ছেদ ৩৫: কারক', icon: '📘', lessons: [
-                { title: 'কারক (১)', videoId: 'JiJz0WjWIJU' },
-                { title: 'কারক (২)', videoId: 'EzJ9hGtcc6g' },
+            { id: 'porichhed_35', name: 'পরিচ্ছেদ ৩৫: কারক', icon: '📐', lessons: [
+                { id: 'k1', title: 'কারক (১)', videoId: 'JiJz0WjWIJU' },
+                { id: 'k2', title: 'কারক (২)', videoId: 'EzJ9hGtcc6g' },
             ]},
-            { id: 'porichhed36', name: 'পরিচ্ছেদ ৩৬: বাচ্য', icon: '📙', lessons: [
-                { title: 'বাচ্য (১)', videoId: 'HBccM8YyGhI' },
-                { title: 'বাচ্য (২)', videoId: 'dByXi6QPKGY' },
+            { id: 'porichhed_36', name: 'পরিচ্ছেদ ৩৬: বাচ্য', icon: '💬', lessons: [
+                { id: 'bc1', title: 'বাচ্য (১)', videoId: 'HBccM8YyGhI' },
+                { id: 'bc2', title: 'বাচ্য (২)', videoId: 'dByXi6QPKGY' },
             ]},
-            { id: 'porichhed38', name: 'পরিচ্ছেদ ৩৮: যতিচিহ্ন', icon: '✍️', lessons: [
-                { title: 'যতিচিহ্ন (১)', videoId: 'z4TiTGmZisA' },
+            { id: 'porichhed_38', name: 'পরিচ্ছেদ ৩৮: যতিচিহ্ন', icon: '✍️', lessons: [
+                { id: 'jt1', title: 'যতিচিহ্ন', videoId: 'z4TiTGmZisA' },
             ]},
-            { id: 'porichhed39', name: 'পরিচ্ছেদ ৩৯: বাগর্থের শ্রেণি', icon: '📕', lessons: [
-                { title: 'বাগর্থের শ্রেণি (১)', videoId: '-r742WizXTw' },
+            { id: 'porichhed_39', name: 'পরিচ্ছেদ ৩৯: বাগর্থের শ্রেণি', icon: '📚', lessons: [
+                { id: 'bg1', title: 'বাগর্থের শ্রেণি', videoId: '-r742WizXTw' },
             ]},
         ]
     },
     {
-        id: 'bgs', name: 'বাংলাদেশ ও বিশ্বপরিচয়', icon: '🌏',
-        gradient: 'linear-gradient(135deg, #22c55e, #0ea5e9)',
+        id: 'bgs', name: 'বাংলাদেশ ও বিশ্বপরিচয়', icon: '🌏', gradient: 'linear-gradient(135deg, #10b981, #059669)',
         topics: [
-            { id: 'bgs_ch5', name: 'অধ্যায় ৫: বাংলাদেশের নদ-নদী ও প্রাকৃতিক সম্পদ', icon: '🏞️', lessons: [
-                { title: 'নদ-নদী ও প্রাকৃতিক সম্পদ (১)', videoId: 'jR3dmuWkacc' },
-                { title: 'নদ-নদী ও প্রাকৃতিক সম্পদ (২)', videoId: 'kD7xavvFpWk' },
-                { title: 'নদ-নদী ও প্রাকৃতিক সম্পদ (৩)', videoId: 'IZgNdayctQk' },
-                { title: 'নদ-নদী ও প্রাকৃতিক সম্পদ (৪)', videoId: 'K0wNXR8MzGo' },
+            { id: 'bgs_ch5', name: 'অধ্যায় ৫: নদ-নদী ও প্রাকৃতিক সম্পদ', icon: '  ️', lessons: [
+                { id: 'nd1', title: 'নদ-নদী ও প্রাকৃতিক সম্পদ (১)', videoId: 'jR3dmuWkacc' },
+                { id: 'nd2', title: 'নদ-নদী ও প্রাকৃতিক সম্পদ (২)', videoId: 'kD7xavvFpWk' },
+                { id: 'nd3', title: 'নদ-নদী ও প্রাকৃতিক সম্পদ (৩)', videoId: 'IZgNdayctQk' },
+                { id: 'nd4', title: 'নদ-নদী ও প্রাকৃতিক সম্পদ (৪)', videoId: 'K0wNXR8MzGo' },
             ]},
             { id: 'bgs_ch6', name: 'অধ্যায় ৬: রাষ্ট্র, নাগরিকতা ও আইন', icon: '⚖️', lessons: [
-                { title: 'রাষ্ট্র, নাগরিকতা ও আইন (১)', videoId: 'Laat_MbgpvY' },
-                { title: 'রাষ্ট্র, নাগরিকতা ও আইন (২)', videoId: 'Tjsa1QbSCPY' },
-                { title: 'রাষ্ট্র, নাগরিকতা ও আইন (৩)', videoId: 'v1Z2Bdi0Zns' },
+                { id: 'rn1', title: 'রাষ্ট্র, নাগরিকতা ও আইন (১)', videoId: 'Laat_MbgpvY' },
+                { id: 'rn2', title: 'রাষ্ট্র, নাগরিকতা ও আইন (২)', videoId: 'Tjsa1QbSCPY' },
+                { id: 'rn3', title: 'রাষ্ট্র, নাগরিকতা ও আইন (৩)', videoId: 'v1Z2Bdi0Zns' },
             ]},
             { id: 'bgs_ch11', name: 'অধ্যায় ১১: অর্থনৈতিক নির্দেশকসমূহ ও বাংলাদেশের অর্থনীতি', icon: '💰', lessons: [
-                { title: 'অর্থনৈতিক নির্দেশকসমূহ (১)', videoId: '3yhXqB4nCjw' },
-                { title: 'অর্থনৈতিক নির্দেশকসমূহ (২)', videoId: 'I-aQAwfKeBc' },
+                { id: 'on1', title: 'অর্থনৈতিক নির্দেশকসমূহ (১)', videoId: '3yhXqB4nCjw' },
+                { id: 'on2', title: 'অর্থনৈতিক নির্দেশকসমূহ (২)', videoId: 'I-aQAwfKeBc' },
             ]},
         ]
     },
     {
-        id: 'biology', name: 'জীববিজ্ঞান', icon: '🧬',
-        gradient: 'linear-gradient(135deg, #10b981, #059669)',
+        id: 'biology', name: 'জীববিজ্ঞান', icon: '🧬', gradient: 'linear-gradient(135deg, #f59e0b, #d97706)',
         topics: [
             { id: 'bio_ch3', name: 'অধ্যায় ৩: কোষ বিভাজন', icon: '🔬', lessons: [
-                { title: 'কোষ বিভাজন (১)', videoId: 'OYEOmNfYqTQ' },
-                { title: 'কোষ বিভাজন (২)', videoId: 'Mx-Ee-IhQ_M' },
-                { title: 'কোষ বিভাজন (৩)', videoId: 'P3ab5ov6QuA' },
-                { title: 'কোষ বিভাজন (৪)', videoId: 'VwZFjD3-BIs' },
+                { id: 'cb1', title: 'কোষ বিভাজন (১)', videoId: 'OYEOmNfYqTQ' },
+                { id: 'cb2', title: 'কোষ বিভাজন (২)', videoId: 'Mx-Ee-IhQ_M' },
+                { id: 'cb3', title: 'কোষ বিভাজন (৩)', videoId: 'P3ab5ov6QuA' },
+                { id: 'cb4', title: 'কোষ বিভাজন (৪)', videoId: 'VwZFjD3-BIs' },
             ]},
             { id: 'bio_ch4', name: 'অধ্যায় ৪: জীবনশক্তি', icon: '⚡', lessons: [
-                { title: 'জীবনশক্তি (১)', videoId: 'HdRpDp4tsFI' },
+                { id: 'js1', title: 'জীবনশক্তি (১)', videoId: 'HdRpDp4tsFI' },
             ]},
             { id: 'bio_ch11', name: 'অধ্যায় ১১: জীবের প্রজনন', icon: '🌱', lessons: [
-                { title: 'জীবের প্রজনন (১)', videoId: '32eReI_C8r4' },
-                { title: 'জীবের প্রজনন (২)', videoId: '_IC4df1kGh8' },
-                { title: 'জীবের প্রজনন (৩)', videoId: 'py2xjcwnO5w' },
+                { id: 'pr1', title: 'জীবের প্রজনন (১)', videoId: '32eReI_C8r4' },
+                { id: 'pr2', title: 'জীবের প্রজনন (২)', videoId: '_IC4df1kGh8' },
+                { id: 'pr3', title: 'জীবের প্রজনন (৩)', videoId: 'py2xjcwnO5w' },
             ]},
-            { id: 'bio_ch12', name: 'অধ্যায় ১২: জীবের বংশগতি', icon: '🧪', lessons: [
-                { title: 'জীবের বংশগতি (১)', videoId: 'TUis_8ZPVmE' },
-                { title: 'জীবের বংশগতি (২)', videoId: 'WZuFOSIIRTk' },
-                { title: 'জীবের বংশগতি (৩)', videoId: '1uAWQdM40is' },
-                { title: 'জীবের বংশগতি (৪)', videoId: '7IcXXWXlqg0' },
-                { title: 'জীবের বংশগতি (৫)', videoId: 'csd6ydDMYHg' },
-                { title: 'জীবের বংশগতি (৬)', videoId: 'McKlAGdPtkY' },
-                { title: 'জীবের বংশগতি (৭)', videoId: 'wIx4npZRzv4' },
+            { id: 'bio_ch12', name: 'অধ্যায় ১২: জীবের বংশগতি', icon: '🧬', lessons: [
+                { id: 'bg1', title: 'বংশগতি (১)', videoId: 'TUis_8ZPVmE' },
+                { id: 'bg2', title: 'বংশগতি (২)', videoId: 'WZuFOSIIRTk' },
+                { id: 'bg3', title: 'বংশগতি (৩)', videoId: '1uAWQdM40is' },
+                { id: 'bg4', title: 'বংশগতি (৪)', videoId: '7IcXXWXlqg0' },
+                { id: 'bg5', title: 'বংশগতি (৫)', videoId: 'csd6ydDMYHg' },
+                { id: 'bg6', title: 'বংশগতি (৬)', videoId: 'McKlAGdPtkY' },
+                { id: 'bg7', title: 'বংশগতি (৭)', videoId: 'wIx4npZRzv4' },
             ]},
         ]
     },
     {
-        id: 'chemistry', name: 'রসায়ন', icon: '⚗️',
-        gradient: 'linear-gradient(135deg, #f43f5e, #e879f9)',
+        id: 'chemistry', name: 'রসায়ন', icon: '⚗️', gradient: 'linear-gradient(135deg, #ec4899, #f43f5e)',
         topics: [
             { id: 'chem_ch3', name: 'অধ্যায় ০৩: পদার্থের গঠন', icon: '⚛️', lessons: [
-                { title: 'পদার্থের গঠন (১)', videoId: 'bBtwe2aOBpg' },
-                { title: 'পদার্থের গঠন (২)', videoId: '_nvWF_HRG4I' },
-                { title: 'পদার্থের গঠন (৩)', videoId: 'rTwsCY6UjHc' },
-                { title: 'পদার্থের গঠন (৪)', videoId: 'N2viU16wzuY' },
-                { title: 'পদার্থের গঠন (৫)', videoId: 'kJvbGXmBtOE' },
+                { id: 'pg1', title: 'পদার্থের গঠন (১)', videoId: 'bBtwe2aOBpg' },
+                { id: 'pg2', title: 'পদার্থের গঠন (২)', videoId: '_nvWF_HRG4I' },
+                { id: 'pg3', title: 'পদার্থের গঠন (৩)', videoId: 'rTwsCY6UjHc' },
+                { id: 'pg4', title: 'পদার্থের গঠন (৪)', videoId: 'N2viU16wzuY' },
+                { id: 'pg5', title: 'পদার্থের গঠন (৫)', videoId: 'kJvbGXmBtOE' },
             ]},
             { id: 'chem_ch9', name: 'অধ্যায় ০৯: এসিড, ক্ষারক ও সমতা', icon: '🧪', lessons: [
-                { title: 'এসিড, ক্ষারক ও সমতা (১)', videoId: 'mCg-xe6jJfc' },
-                { title: 'এসিড, ক্ষারক ও সমতা (২)', videoId: 'zNWLNmHHNeI' },
-                { title: 'এসিড, ক্ষারক ও সমতা (৩)', videoId: 'ijNb3bDOoHM' },
-                { title: 'এসিড, ক্ষারক ও সমতা (৪)', videoId: 'dvT981ahhU0' },
+                { id: 'ac1', title: 'এসিড, ক্ষারক ও সমতা (১)', videoId: 'mCg-xe6jJfc' },
+                { id: 'ac2', title: 'এসিড, ক্ষারক ও সমতা (২)', videoId: 'zNWLNmHHNeI' },
+                { id: 'ac3', title: 'এসিড, ক্ষারক ও সমতা (৩)', videoId: 'ijNb3bDOoHM' },
+                { id: 'ac4', title: 'এসিড, ক্ষারক ও সমতা (৪)', videoId: 'dvT981ahhU0' },
             ]},
         ]
     },
     {
-        id: 'physics', name: 'পদার্থবিজ্ঞান', icon: '⚡',
-        gradient: 'linear-gradient(135deg, #f59e0b, #ef4444)',
+        id: 'physics', name: 'পদার্থবিজ্ঞান', icon: '⚡', gradient: 'linear-gradient(135deg, #f97316, #ea580c)',
         topics: [
             { id: 'phy_ch5', name: 'অধ্যায় ৫: পদার্থের অবস্থা ও চাপ', icon: '🌡️', lessons: [
-                { title: 'পদার্থের অবস্থা ও চাপ (১)', videoId: 'RfOSFQ14zdc' },
-                { title: 'পদার্থের অবস্থা ও চাপ (২)', videoId: 'Rf75rQb14Rs' },
-                { title: 'পদার্থের অবস্থা ও চাপ (৩)', videoId: 'SBtCyjBsqvs' },
-                { title: 'পদার্থের অবস্থা ও চাপ (৪)', videoId: 'qdJKCRexohM' },
-                { title: 'পদার্থের অবস্থা ও চাপ (৫)', videoId: 'yPRETYmbfhY' },
+                { id: 'pc1', title: 'পদার্থের অবস্থা ও চাপ (১)', videoId: 'RfOSFQ14zdc' },
+                { id: 'pc2', title: 'পদার্থের অবস্থা ও চাপ (২)', videoId: 'Rf75rQb14Rs' },
+                { id: 'pc3', title: 'পদার্থের অবস্থা ও চাপ (৩)', videoId: 'SBtCyjBsqvs' },
+                { id: 'pc4', title: 'পদার্থের অবস্থা ও চাপ (৪)', videoId: 'qdJKCRexohM' },
+                { id: 'pc5', title: 'পদার্থের অবস্থা ও চাপ (৫)', videoId: 'yPRETYmbfhY' },
             ]},
         ]
     },
     {
-        id: 'math', name: 'গণিত', icon: '📐',
-        gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
-        comingSoon: true,
-        topics: []
+        id: 'math', name: 'গণিত', icon: '📐', gradient: 'linear-gradient(135deg, #06b6d4, #0891b2)',
+        comingSoon: true, topics: []
     },
     {
-        id: 'highermath', name: 'উচ্চতর গণিত', icon: '🧮',
-        gradient: 'linear-gradient(135deg, #06b6d4, #8b5cf6)',
-        comingSoon: true,
-        topics: []
+        id: 'higher_math', name: 'উচ্চতর গণিত', icon: '🧮', gradient: 'linear-gradient(135deg, #6366f1, #4f46e5)',
+        comingSoon: true, topics: []
     },
 ];
 
 // ========================
-//  STATE
+//  GLOBALS
 // ========================
 let activeStudent = null;
 let currentSubject = null;
 let currentTopic = null;
 let currentLessonIndex = 0;
 let sessionSeconds = 0;
-let sessionTimer = null;
+let sessionInterval = null;
 
 // ========================
-//  THEME SYSTEM
-// ========================
-function getTheme() { return localStorage.getItem('ronaldo_theme') || 'light'; }
-function setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('ronaldo_theme', theme);
-    const btn = document.getElementById('themeBtn');
-    if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
-}
-function toggleTheme() { setTheme(getTheme() === 'dark' ? 'light' : 'dark'); }
-
-// ========================
-//  BENGALI NUMBERS
+//  HELPERS
 // ========================
 function toBanglaNum(n) { return String(n).replace(/[0-9]/g, d => '০১২৩৪৫৬৭৮৯'[d]); }
+
+// ========================
+//  THEME
+// ========================
+function getTheme() { return localStorage.getItem('ronaldo_theme') || 'light'; }
+function setTheme(t) {
+    document.documentElement.setAttribute('data-theme', t);
+    localStorage.setItem('ronaldo_theme', t);
+    const btn = document.getElementById('themeBtn');
+    if (btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
+}
+function toggleTheme() { setTheme(getTheme() === 'dark' ? 'light' : 'dark'); }
 
 // ========================
 //  PROGRESS TRACKING
 // ========================
 function getWatchedKey() { return 'ronaldo_watched'; }
 function getWatchedData() { try { return JSON.parse(localStorage.getItem(getWatchedKey()) || '{}'); } catch { return {}; } }
-function isWatched(subjectId, topicId, lessonIndex) { const d = getWatchedData(); return !!(d[subjectId] && d[subjectId][topicId] && d[subjectId][topicId][lessonIndex]); }
-function markWatched(subjectId, topicId, lessonIndex) {
-    const d = getWatchedData();
-    if (!d[subjectId]) d[subjectId] = {};
-    if (!d[subjectId][topicId]) d[subjectId][topicId] = {};
-    d[subjectId][topicId][lessonIndex] = true;
-    localStorage.setItem(getWatchedKey(), JSON.stringify(d));
+function markWatched(subjectId, topicId, lessonIdx) {
+    const data = getWatchedData();
+    const key = `${subjectId}__${topicId}__${lessonIdx}`;
+    data[key] = true;
+    localStorage.setItem(getWatchedKey(), JSON.stringify(data));
 }
-function getTopicProgress(subjectId, topicId, total) {
-    const d = getWatchedData();
+function isWatched(subjectId, topicId, lessonIdx) {
+    return !!getWatchedData()[`${subjectId}__${topicId}__${lessonIdx}`];
+}
+function getTopicProgress(subjectId, topicId, totalLessons) {
+    const data = getWatchedData();
     let done = 0;
-    if (d[subjectId] && d[subjectId][topicId]) done = Object.keys(d[subjectId][topicId]).length;
-    const pct = total ? Math.round((done / total) * 100) : 0;
-    return { done, total, pct };
+    for (let i = 0; i < totalLessons; i++) { if (data[`${subjectId}__${topicId}__${i}`]) done++; }
+    return { done, total: totalLessons, pct: totalLessons ? Math.round((done / totalLessons) * 100) : 0 };
 }
 function getSubjectProgress(subjectId, topics) {
-    let total = 0, done = 0;
-    topics.forEach(t => { total += t.lessons.length; const p = getTopicProgress(subjectId, t.id, t.lessons.length); done += p.done; });
+    let done = 0, total = 0;
+    topics.forEach(t => { const tp = getTopicProgress(subjectId, t.id, t.lessons.length); done += tp.done; total += tp.total; });
     return { done, total, pct: total ? Math.round((done / total) * 100) : 0 };
+}
+function resetProgress() {
+    if (confirm('আপনি কি নিশ্চিত? সমস্ত ভিডিও দেখার ডেটা মুছে যাবে!')) {
+        localStorage.removeItem(getWatchedKey());
+        goHome();
+    }
 }
 
 // ========================
@@ -666,103 +585,120 @@ function getSubjectProgress(subjectId, topics) {
 // ========================
 function startSessionTimer() {
     sessionSeconds = 0;
-    updateTimerDisplay();
-    sessionTimer = setInterval(() => { sessionSeconds++; updateTimerDisplay(); }, 1000);
-}
-function stopSessionTimer() { if (sessionTimer) { clearInterval(sessionTimer); sessionTimer = null; } }
-function updateTimerDisplay() {
-    const h = Math.floor(sessionSeconds / 3600);
-    const m = Math.floor((sessionSeconds % 3600) / 60);
-    const s = sessionSeconds % 60;
-    const pad = n => String(n).padStart(2, '0');
-    let timeStr = h > 0 ? `${pad(h)}:${pad(m)}:${pad(s)}` : `${pad(m)}:${pad(s)}`;
-    const el = document.getElementById('timerDisplay');
-    if (el) el.textContent = toBanglaNum(timeStr);
+    if (sessionInterval) clearInterval(sessionInterval);
+    sessionInterval = setInterval(() => {
+        sessionSeconds++;
+        const h = Math.floor(sessionSeconds / 3600);
+        const m = Math.floor((sessionSeconds % 3600) / 60);
+        const s = sessionSeconds % 60;
+        const label = document.getElementById('sessionTimer');
+        if (label) {
+            if (h > 0) label.textContent = `⏱️ ${toBanglaNum(String(h).padStart(2,'0'))}:${toBanglaNum(String(m).padStart(2,'0'))}:${toBanglaNum(String(s).padStart(2,'0'))}`;
+            else label.textContent = `⏱️ ${toBanglaNum(String(m).padStart(2,'0'))}:${toBanglaNum(String(s).padStart(2,'0'))}`;
+        }
+    }, 1000);
 }
 
 // ========================
-//  AUTH SYSTEM (Phone Number)
+//  VISIBLE COURSES
+// ========================
+function getVisibleCourses() {
+    if (!activeStudent) return [];
+    const stu = STUDENTS[activeStudent.phone];
+    if (!stu) return [];
+    if (stu.subjects === 'all') return COURSES;
+    return COURSES.filter(c => stu.subjects.includes(c.id));
+}
+
+// ========================
+//  LOGIN
 // ========================
 function handleLogin() {
-    const input = document.getElementById('phoneInput');
+    const passEl = document.getElementById('passInput');
+    const pass = passEl.value.trim();
     const errEl = document.getElementById('errorMsg');
-    const phone = input.value.trim();
 
-    if (phone.length < 11) {
-        input.classList.add('error');
-        errEl.textContent = '⚠️ সম্পূর্ণ ১১ সংখ্যার নম্বর দিন';
+    if (!pass || pass.length !== 11) {
+        passEl.classList.add('error');
+        errEl.textContent = '⚠️ সঠিক পাসওয়ার্ড দিন!';
         return;
     }
 
-    const student = STUDENTS[phone];
+    const student = STUDENTS[pass];
     if (!student) {
-        input.classList.add('error');
-        errEl.textContent = '❌ এই নম্বরটি নিবন্ধিত নয়!';
+        passEl.classList.add('error');
+        errEl.textContent = '❌ ভুল পাসওয়ার্ড!';
         return;
     }
 
-    input.classList.add('success');
-    activeStudent = { phone, ...student };
-    sessionStorage.setItem('ronaldo_phone', phone);
+    passEl.classList.remove('error');
+    passEl.classList.add('success');
+    errEl.textContent = '';
+    activeStudent = { phone: pass, name: student.name };
+    sessionStorage.setItem('ronaldo_phone', pass);
 
-    setTimeout(() => enterDashboard(), 500);
-}
-
-function handleLogout() {
-    sessionStorage.removeItem('ronaldo_phone');
-    activeStudent = null;
-    destroyPlayer();
-    stopSessionTimer();
-    document.getElementById('mainHeader').style.display = 'none';
-    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-    document.getElementById('viewLogin').classList.add('active');
-    const input = document.getElementById('phoneInput');
-    input.value = '';
-    input.classList.remove('error', 'success');
-    document.getElementById('errorMsg').textContent = '';
-    input.focus();
+    setTimeout(() => enterDashboard(), 400);
 }
 
 function enterDashboard() {
     document.getElementById('viewLogin').classList.remove('active');
+    document.getElementById('viewLogin').style.display = 'none';
     document.getElementById('mainHeader').style.display = '';
-
-    // Set greeting
-    document.getElementById('greetingName').textContent = activeStudent.name;
-    document.getElementById('homeGreetName').textContent = activeStudent.name;
-
+    document.getElementById('mainFooter').style.display = '';
+    document.getElementById('greetBadge').textContent = `👋 ${activeStudent.name}`;
+    document.getElementById('homeGreeting').textContent = `স্বাগতম, ${activeStudent.name}!`;
     startSessionTimer();
     goHome();
+
+    // Show welcome popup once per student
+    const popupKey = `ronaldo_welcomed_${activeStudent.phone}`;
+    if (!localStorage.getItem(popupKey)) {
+        setTimeout(() => {
+            document.getElementById('popupGreeting').textContent = `স্বাগতম, ${activeStudent.name}! 🎉`;
+            const popup = document.getElementById('welcomePopup');
+            popup.setAttribute('style', 'display:flex; align-items:center; justify-content:center;');
+            localStorage.setItem(popupKey, 'true');
+        }, 800);
+    }
 }
 
-function getVisibleCourses() {
-    if (!activeStudent) return [];
-    if (activeStudent.subjects.includes('all')) return COURSES;
-    return COURSES.filter(c => activeStudent.subjects.includes(c.id));
+function closeWelcome() {
+    document.getElementById('welcomePopup').setAttribute('style', 'display:none;');
+}
+
+function logout() {
+    destroyPlayer();
+    if (sessionInterval) clearInterval(sessionInterval);
+    activeStudent = null;
+    sessionStorage.removeItem('ronaldo_phone');
+    document.getElementById('mainHeader').style.display = 'none';
+    document.getElementById('mainFooter').style.display = 'none';
+    document.getElementById('passInput').value = '';
+    document.getElementById('passInput').classList.remove('success', 'error');
+    document.getElementById('errorMsg').textContent = '';
+    ['viewHome', 'viewTopics', 'viewVideo'].forEach(v => { const el = document.getElementById(v); el.classList.remove('active'); el.style.display = 'none'; });
+    const login = document.getElementById('viewLogin');
+    login.style.display = '';
+    login.classList.add('active');
 }
 
 // ========================
 //  NAVIGATION
 // ========================
 function showView(id) {
-    destroyPlayer();
-    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
+    ['viewHome', 'viewTopics', 'viewVideo'].forEach(v => { const el = document.getElementById(v); el.classList.remove('active'); });
+    setTimeout(() => { document.getElementById(id).classList.add('active'); }, 50);
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function updateBreadcrumb(items) {
-    const el = document.getElementById('headerBreadcrumb');
-    el.innerHTML = items.map((item, i) => {
-        if (i < items.length - 1 && item.action) {
-            return `<span class="link" onclick="${item.action}">${item.label}</span><span class="sep">›</span>`;
-        }
+    document.getElementById('breadcrumbBar').innerHTML = items.map((item, i) => {
+        if (i < items.length - 1) return `<span class="link" onclick="${item.action}">${item.label}</span><span class="sep">›</span>`;
         return `<span class="current">${item.label}</span>`;
     }).join('');
 }
 
 // ========================
-//  COUNT-UP ANIMATION
+//  ANIMATED COUNTERS
 // ========================
 function animateCount(el, target, duration) {
     const start = performance.now();
@@ -771,8 +707,7 @@ function animateCount(el, target, duration) {
         const elapsed = now - start;
         const progress = Math.min(elapsed / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 4);
-        const current = Math.round(eased * target);
-        el.textContent = toBanglaNum(current);
+        el.textContent = toBanglaNum(Math.round(eased * target));
         if (progress < 1) requestAnimationFrame(update);
     }
     requestAnimationFrame(update);
@@ -782,6 +717,7 @@ function animateCount(el, target, duration) {
 //  HOME VIEW
 // ========================
 function goHome() {
+    destroyPlayer();
     const courses = getVisibleCourses();
     let totalTopics = 0, totalLessons = 0;
     courses.forEach(c => { if (!c.comingSoon) { totalTopics += c.topics.length; c.topics.forEach(t => totalLessons += t.lessons.length); }});
@@ -792,8 +728,7 @@ function goHome() {
         animateCount(document.getElementById('statLessons'), totalLessons, 1600);
     }, 400);
 
-    const grid = document.getElementById('subjectGrid');
-    grid.innerHTML = courses.map(c => {
+    document.getElementById('subjectGrid').innerHTML = courses.map(c => {
         const isComing = c.comingSoon;
         const sp = !isComing ? getSubjectProgress(c.id, c.topics) : { done: 0, total: 0, pct: 0 };
         return `
@@ -809,9 +744,7 @@ function goHome() {
                 <span class="progress-text">${toBanglaNum(sp.pct)}% সম্পন্ন</span>
                 <span class="progress-text">${toBanglaNum(sp.done)}/${toBanglaNum(sp.total)}</span>
             </div>
-            <div class="progress-bar-bg">
-                <div class="progress-bar-fill" style="width:${sp.pct}%"></div>
-            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:${sp.pct}%"></div></div>
             ` : ''}
         </div>`;
     }).join('');
@@ -833,8 +766,7 @@ function openSubject(subjectId) {
     document.getElementById('subjectProgressBar').style.width = sp.pct + '%';
     document.getElementById('subjectProgressText').textContent = `${toBanglaNum(sp.pct)}%`;
 
-    const topicList = document.getElementById('topicList');
-    topicList.innerHTML = currentSubject.topics.map((t, ti) => {
+    document.getElementById('topicList').innerHTML = currentSubject.topics.map((t, ti) => {
         const tp = getTopicProgress(currentSubject.id, t.id, t.lessons.length);
         return `
         <div class="topic-card tile p-5" onclick="openTopic('${currentSubject.id}', ${ti})">
@@ -850,9 +782,7 @@ function openSubject(subjectId) {
                     <span class="progress-text">${toBanglaNum(tp.done)}/${toBanglaNum(tp.total)} সম্পন্ন</span>
                     <span class="progress-text">${toBanglaNum(tp.pct)}%</span>
                 </div>
-                <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width:${tp.pct}%"></div>
-                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:${tp.pct}%"></div></div>
             </div>
             <div class="space-y-1.5">
                 ${t.lessons.slice(0, 3).map((l, li) => {
@@ -867,10 +797,7 @@ function openSubject(subjectId) {
         </div>`;
     }).join('');
 
-    updateBreadcrumb([
-        { label: 'হোম', action: 'goHome()' },
-        { label: currentSubject.name }
-    ]);
+    updateBreadcrumb([{ label: 'হোম', action: 'goHome()' }, { label: currentSubject.name }]);
     showView('viewTopics');
 }
 
@@ -895,13 +822,11 @@ function openTopic(subjectId, topicIndex, lessonIndex = 0) {
 function renderPlaylist() {
     document.getElementById('playlistTitle').textContent = currentTopic.name;
     document.getElementById('playlistCount').textContent = `${currentTopic.lessons.length} টি পাঠ • ${currentSubject.name}`;
-
     const tp = getTopicProgress(currentSubject.id, currentTopic.id, currentTopic.lessons.length);
     document.getElementById('topicProgressBar').style.width = tp.pct + '%';
     document.getElementById('topicProgressText').textContent = `${toBanglaNum(tp.done)}/${toBanglaNum(tp.total)} সম্পন্ন`;
 
-    const container = document.getElementById('playlistItems');
-    container.innerHTML = currentTopic.lessons.map((l, i) => {
+    document.getElementById('playlistItems').innerHTML = currentTopic.lessons.map((l, i) => {
         const watched = isWatched(currentSubject.id, currentTopic.id, i);
         return `
         <div class="lesson-card flex items-center gap-3 px-4 py-3 ${i === currentLessonIndex ? 'now-playing' : ''}"
@@ -930,8 +855,11 @@ function playLesson(index) {
     if (bigPlay) bigPlay.style.display = '';
     const seek = document.getElementById('seekBar'); if (seek) seek.value = 0;
     const timeLabel = document.getElementById('timeLabel'); if (timeLabel) timeLabel.textContent = '0:00 / 0:00';
-
     clearTimeout(window.__watchTimeout);
+
+    // Remove any previous error
+    const oldErr = document.getElementById('videoError');
+    if (oldErr) oldErr.remove();
 
     const startSeconds = lesson.start || 0;
     ensureYTPlayer().then(() => {
@@ -939,7 +867,7 @@ function playLesson(index) {
             window.__ytPlayer = new YT.Player('ytPlayerMount', {
                 width: '100%', height: '100%',
                 videoId: lesson.videoId,
-                playerVars: { autoplay: 0, controls: 0, rel: 0, modestbranding: 1, fs: 1, iv_load_policy: 3, disablekb: 0, playsinline: 1 },
+                playerVars: { autoplay: 0, controls: 1, rel: 0, modestbranding: 1, fs: 0, iv_load_policy: 3, disablekb: 1, playsinline: 1, start: startSeconds },
                 events: {
                     onReady: (e) => { setupCustomControls(e.target); if (startSeconds) e.target.seekTo(startSeconds, true); updatePlayUI(); },
                     onStateChange: onYTStateChange,
@@ -951,32 +879,12 @@ function playLesson(index) {
         }
     });
 
-    document.querySelectorAll('.lesson-card').forEach(el => {
-        const i = parseInt(el.dataset.index);
-        el.classList.toggle('now-playing', i === index);
-        const numEl = el.querySelector('div');
-        const watched = isWatched(currentSubject.id, currentTopic.id, i);
-        if (i === index) {
-            numEl.className = 'w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-xs font-bold bg-sky-500 text-white';
-            numEl.textContent = '▶';
-        } else if (watched) {
-            numEl.className = 'w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-xs font-bold bg-green-500/20 text-green-500';
-            numEl.textContent = '✓';
-        } else {
-            numEl.className = 'w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-xs font-bold';
-            numEl.style.background = 'var(--bg-overlay)';
-            numEl.style.color = 'var(--text-muted)';
-            numEl.textContent = i + 1;
-        }
-    });
+    renderPlaylist();
 
     document.getElementById('prevLessonBtn').disabled = index === 0;
     document.getElementById('prevLessonBtn').style.opacity = index === 0 ? '0.4' : '1';
     document.getElementById('nextLessonBtn').disabled = index === currentTopic.lessons.length - 1;
     document.getElementById('nextLessonBtn').style.opacity = index === currentTopic.lessons.length - 1 ? '0.4' : '1';
-
-    const activeCard = document.querySelector('.lesson-card.now-playing');
-    if (activeCard) activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 function nextLesson() { if (currentLessonIndex < currentTopic.lessons.length - 1) playLesson(currentLessonIndex + 1); }
@@ -989,10 +897,17 @@ function destroyPlayer() {
     }
     stopProgress();
     clearTimeout(window.__watchTimeout);
+    const container = document.getElementById('videoContainer');
+    if (container && !document.getElementById('ytPlayerMount')) {
+        const mount = document.createElement('div');
+        mount.id = 'ytPlayerMount';
+        mount.className = 'absolute inset-0';
+        container.insertBefore(mount, container.firstChild);
+    }
 }
 
 // ========================
-//  PROTECTION LAYER
+//  PROTECTION
 // ========================
 document.addEventListener('keydown', function(e) {
     if (e.key === 'F12') { e.preventDefault(); return false; }
@@ -1049,28 +964,18 @@ function setupCustomControls(player) {
         if (st !== YT.PlayerState.PLAYING) player.playVideo(); else player.pauseVideo();
     }
 
-    bigPlay.onclick = () => { playPause(); bigPlay.style.display = 'none'; };
-    bigPlay.onkeydown = (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playPause(); bigPlay.style.display = 'none'; }
-    };
+    bigPlay.onclick = (e) => { e.preventDefault(); playPause(); bigPlay.style.display = 'none'; };
+    bigPlay.ontouchend = (e) => { e.preventDefault(); playPause(); bigPlay.style.display = 'none'; };
     btn.onclick = playPause;
-    seek.oninput = () => { const d = player.getDuration() || 0; const t = d * (seek.value/100); if (Number.isFinite(t)) player.seekTo(t, true); };
+    btn.ontouchend = (e) => { e.preventDefault(); playPause(); };
+    seek.oninput = () => { const d = player.getDuration() || 0; player.seekTo(d * (seek.value / 100), true); };
     vol.oninput = () => { player.setVolume(Math.max(0, Math.min(100, +vol.value))); };
     speed.onchange = () => { player.setPlaybackRate(parseFloat(speed.value)); };
     fsBtn.onclick = () => {
         const container = document.getElementById('videoContainer');
         if (!document.fullscreenElement) container.requestFullscreen?.(); else document.exitFullscreen?.();
     };
-
-    if (bigPlay) {
-        bigPlay.addEventListener('touchstart', (e) => { e.preventDefault(); playPause(); bigPlay.style.display = 'none'; }, { passive: false });
-    }
-    if (btn) {
-        btn.addEventListener('touchstart', (e) => { e.preventDefault(); playPause(); }, { passive: false });
-    }
-
-    try { player.setVolume(parseInt(vol.value,10)); } catch(e) {}
-    updateTime();
+    try { player.setVolume(parseInt(vol.value, 10)); } catch(e) {}
 }
 
 function startProgress() { stopProgress(); progressTimer = setInterval(updateTime, 250); }
@@ -1080,33 +985,26 @@ function updateTime() {
     if (!window.__ytPlayer || !window.__ytPlayer.getCurrentTime) return;
     const t = window.__ytPlayer.getCurrentTime() || 0;
     const d = window.__ytPlayer.getDuration() || 0;
-    const pct = d ? Math.min(100, Math.max(0, (t/d)*100)) : 0;
+    const pct = d ? Math.min(100, Math.max(0, (t / d) * 100)) : 0;
     const seek = document.getElementById('seekBar');
     if (seek) seek.value = pct;
     const timeLabel = document.getElementById('timeLabel');
     if (timeLabel) timeLabel.textContent = `${fmtTime(t)} / ${fmtTime(d)}`;
 }
-function fmtTime(s) { s = Math.max(0, Math.floor(s)); const m = Math.floor(s/60); const ss = (s%60).toString().padStart(2,'0'); return `${m}:${ss}`; }
+function fmtTime(s) { s = Math.max(0, Math.floor(s)); const m = Math.floor(s / 60); const ss = (s % 60).toString().padStart(2, '0'); return `${m}:${ss}`; }
 
 function updatePlayUI() {
     const btn = document.getElementById('btnPlayPause');
     const bigPlay = document.getElementById('bigPlayBtn');
     if (!btn || !window.__ytPlayer) return;
-    const st = window.__ytPlayer.getPlayerState();
-    const isPlaying = st === YT.PlayerState.PLAYING;
-    btn.innerHTML = isPlaying
-        ? '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg> <span class="hidden sm:inline">Pause</span>'
-        : '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> <span class="hidden sm:inline">Play</span>';
-    if (bigPlay) {
-        const shouldShow = !isPlaying;
-        bigPlay.style.display = shouldShow ? '' : 'none';
-        bigPlay.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
-    }
+    try {
+        const st = window.__ytPlayer.getPlayerState();
+        const isPlaying = st === YT.PlayerState.PLAYING;
+        btn.innerHTML = isPlaying ? '⏸ <span class="hidden sm:inline">Pause</span>' : '▶ <span class="hidden sm:inline">Play</span>';
+        if (bigPlay) bigPlay.style.display = isPlaying ? 'none' : '';
+    } catch(e) {}
 }
 
-// ========================
-//  VIDEO ERROR HANDLING
-// ========================
 function onYTError(evt) {
     const codes = { 2: 'ভুল ভিডিও ID', 5: 'HTML5 প্লেয়ার সমস্যা', 100: 'ভিডিও পাওয়া যায়নি', 101: 'এম্বেড অনুমতি নেই', 150: 'এম্বেড অনুমতি নেই' };
     const msg = codes[evt.data] || `ত্রুটি কোড: ${evt.data}`;
@@ -1114,12 +1012,7 @@ function onYTError(evt) {
     const errorDiv = document.createElement('div');
     errorDiv.id = 'videoError';
     errorDiv.style.cssText = 'position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:12px;background:#0f172a;';
-    errorDiv.innerHTML = `
-        <span style="font-size:48px;margin-bottom:12px;">⚠️</span>
-        <p style="color:#f87171;font-size:16px;font-weight:700;margin-bottom:6px;">ভিডিও লোড হচ্ছে না</p>
-        <p style="color:#94a3b8;font-size:13px;margin-bottom:16px;">${msg}</p>
-        <button onclick="retryVideo()" style="padding:10px 24px;background:linear-gradient(135deg,#0ea5e9,#6366f1);border:none;border-radius:10px;color:white;font-weight:600;cursor:pointer;">🔄 আবার চেষ্টা করুন</button>
-    `;
+    errorDiv.innerHTML = `<span style="font-size:48px;margin-bottom:12px;">⚠️</span><p style="color:#f87171;font-size:16px;font-weight:700;margin-bottom:6px;">ভিডিও লোড হচ্ছে না</p><p style="color:#94a3b8;font-size:13px;margin-bottom:16px;">${msg}</p><button onclick="retryVideo()" style="padding:10px 24px;background:linear-gradient(135deg,#0ea5e9,#6366f1);border:none;border-radius:10px;color:white;font-weight:600;cursor:pointer;">🔄 আবার চেষ্টা করুন</button>`;
     const existing = document.getElementById('videoError');
     if (existing) existing.remove();
     container.appendChild(errorDiv);
@@ -1130,12 +1023,6 @@ function retryVideo() {
     if (errorDiv) errorDiv.remove();
     if (currentTopic && currentTopic.lessons[currentLessonIndex]) {
         destroyPlayer();
-        const mount = document.createElement('div');
-        mount.id = 'ytPlayerMount';
-        mount.className = 'absolute inset-0';
-        const container = document.getElementById('videoContainer');
-        const shield = document.getElementById('clickShield');
-        container.insertBefore(mount, shield);
         playLesson(currentLessonIndex);
     }
 }
@@ -1145,21 +1032,19 @@ function retryVideo() {
 // ========================
 document.addEventListener('DOMContentLoaded', () => {
     setTheme(getTheme());
-
     const savedPhone = sessionStorage.getItem('ronaldo_phone');
     if (savedPhone && STUDENTS[savedPhone]) {
-        activeStudent = { phone: savedPhone, ...STUDENTS[savedPhone] };
+        activeStudent = { phone: savedPhone, name: STUDENTS[savedPhone].name };
         enterDashboard();
     } else {
-        document.getElementById('phoneInput').focus();
+        document.getElementById('passInput').focus();
     }
-
-    document.getElementById('phoneInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') handleLogin(); });
-    document.getElementById('phoneInput').addEventListener('input', (e) => {
+    document.getElementById('passInput').addEventListener('input', (e) => {
         e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 11);
         document.getElementById('errorMsg').textContent = '';
         e.target.classList.remove('error', 'success');
     });
+    document.getElementById('passInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') handleLogin(); });
 });
 </script>
 
