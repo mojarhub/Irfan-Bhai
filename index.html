@@ -739,7 +739,7 @@ function handleLogin() {
     const pass = passEl.value.trim();
     const errEl = document.getElementById('errorMsg');
 
-    if (!pass || pass.length !== 11) {
+    if (!pass) {
         passEl.classList.add('error');
         errEl.textContent = '⚠️ সঠিক পাসওয়ার্ড দিন!';
         return;
