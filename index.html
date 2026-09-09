@@ -1,166 +1,101 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPA Result Portal</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f4f6f9;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            background: #ffffff;
-            width: 100%;
-            max-width: 480px;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        h2 {
-            color: #1e3a8a;
-            margin-bottom: 8px;
-        }
-
-        p.subtitle {
-            color: #6b7280;
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
-
-        .student-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .student-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            padding: 14px 20px;
-            border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .student-card:hover {
-            background: #eff6ff;
-            border-color: #3b82f6;
-            transform: translateY(-2px);
-        }
-
-        .student-name {
-            font-weight: 600;
-            font-size: 16px;
-            text-transform: capitalize;
-        }
-
-        .btn-view {
-            background: #2563eb;
-            color: white;
-            font-size: 13px;
-            padding: 6px 14px;
-            border-radius: 6px;
-            font-weight: 500;
-        }
-
-        /* Fullscreen Overlay Styling */
-        #fullscreen-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: #0d1117;
-            color: #ffffff;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 30px;
-            z-index: 9999;
-        }
-
-        .troll-message {
-            font-size: 2.2rem;
-            line-height: 1.6;
-            font-weight: bold;
-            color: #facc15;
-            max-width: 800px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 320px;
+    }
+    input {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .loader {
+      display: none;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #007bff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      margin: 15px auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h2>Check Your GPA Grade</h2>
-        <p class="subtitle">Select a student name below to view the detailed mark sheet.</p>
+<div class="card">
+  <h2>Live Weather</h2>
+  <input type="text" id="city" placeholder="Enter city name...">
+  <br>
+  <button onclick="getWeather()">Check Weather</button>
+  <div class="loader" id="loader"></div>
+  <div id="result"></div>
+</div>
 
-        <ul class="student-list">
-            <li class="student-card" onclick="triggerPrank()">
-                <span class="student-name">Ankush</span>
-                <span class="btn-view">View GPA</span>
-            </li>
-            <li class="student-card" onclick="triggerPrank()">
-                <span class="student-name">Labib</span>
-                <span class="btn-view">View GPA</span>
-            </li>
-            <li class="student-card" onclick="triggerPrank()">
-                <span class="student-name">Najmul</span>
-                <span class="btn-view">View GPA</span>
-            </li>
-            <li class="student-card" onclick="triggerPrank()">
-                <span class="student-name">Soad</span>
-                <span class="btn-view">View GPA</span>
-            </li>
-            <li class="student-card" onclick="triggerPrank()">
-                <span class="student-name">Shihab</span>
-                <span class="btn-view">View GPA</span>
-            </li>
-        </ul>
-    </div>
+<script>
+  function getWeather() {
+    const city = document.getElementById("city").value;
+    const loader = document.getElementById("loader");
+    const result = document.getElementById("result");
 
-    <!-- Hidden Fullscreen Overlay -->
-    <div id="fullscreen-overlay">
-        <div class="troll-message">
-            ভাই আপনি জানেন আপনি GPA 5 পাবেন, তাও নিজের/অন্যের টা দেখে লাভ কি?
-        </div>
-    </div>
+    if (!city) {
+      result.style.color = "red";
+      result.innerText = "Please enter a city name.";
+      return;
+    }
 
-    <script>
-        function triggerPrank() {
-            const overlay = document.getElementById('fullscreen-overlay');
-            overlay.style.display = 'flex';
+    result.innerText = "";
+    loader.style.display = "block";
 
-            // Request Fullscreen on the browser
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            } else if (document.documentElement.webkitRequestFullscreen) { /* Safari */
-                document.documentElement.webkitRequestFullscreen();
-            } else if (document.documentElement.msRequestFullscreen) { /* IE11 */
-                document.documentElement.msRequestFullscreen();
-            }
-        }
-    </script>
+    // Simulates a few seconds of loading before revealing the message
+    setTimeout(() => {
+      loader.style.display = "none";
+      result.style.color = "#222";
+      result.innerText = "Akash bhora tara\nhuga mara shara";
+    }, 2500);
+  }
+</script>
 
 </body>
 </html>
